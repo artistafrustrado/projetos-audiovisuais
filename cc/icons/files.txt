@@ -1,0 +1,74 @@
+   [66]svg [67]eps [68]png
+   [69]svg [70]eps [71]png
+   [72]svg [73]eps [74]png
+   Some rights reserved     Some Rights Reserved [75]svg  [76]eps  [77]gif
+   BY                       by                   [78]svg  [79]eps  [80]png
+   BY SA                    by-sa                [81]svg  [82]eps  [83]png
+   BY ND                    by-nd                [84]svg  [85]eps  [86]png
+   BY NC                    by-nc                [87]svg  [88]eps  [89]png
+   BY NC EU                 by-nc                [90]svg  [91]eps  [92]png
+   BY NC SA                 by-nc-sa             [93]svg  [94]eps  [95]png
+   BY NC SA EU              by-nc-sa             [96]svg  [97]eps  [98]png
+   BY NC ND                 by-nc-nd             [99]svg  [100]eps [101]png
+   BY NC ND EU              by-nc-nd             [102]svg [103]eps [104]png
+   CC0                      cc-zero              [105]svg          [106]png
+   Public Domain Mark       public domain mark   [107]svg          [108]png
+   BY 80x15                 by                   [109]svg [110]eps [111]png
+   BY SA 80x15              by-sa                [112]svg [113]eps [114]png
+   BY ND 80x15              by-nd                [115]svg [116]eps [117]png
+   BY NC 80x15              by-nc                [118]svg [119]eps [120]png
+   BY NC SA 80x15           by-nc-sa             [121]svg [122]eps [123]png
+   BY NC ND 80x15           by-nc-nd             [124]svg [125]eps [126]png
+   CC0 80x15                cc-zero              [127]svg          [128]png
+   Public Domain Mark 80x15 Public Domain Mark   [129]svg          [130]png
+   CC            cc       [131]svg [132]eps [133]png
+   BY            by       [134]svg [135]eps [136]png
+   NC            nc"      [137]svg [138]eps [139]png
+   NC (EU)       nc-eu    [140]svg [141]eps [142]png
+   NC (JP)       ncjp     [143]svg [144]eps [145]png
+   SA            sa       [146]svg [147]eps [148]png
+   ND            nd       [149]svg [150]eps [151]png
+   Public Domain pd       [152]svg [153]eps [154]png
+   Zero          zero     [155]svg [156]eps [157]png
+   Share         share    [158]svg [159]eps [160]png
+   Remix                  [161]svg [162]eps [163]png
+   All icons     allicons [164]svg [165]eps [166]png
+   [167]svg [168]eps [169]png
+  66. https://mirrors.creativecommons.org/presskit/logos/cc.logo.svg
+  69. https://d15omoko64skxi.cloudfront.net/wp-content/uploads/2019/02/ccheart_black.svg_.zip
+  72. https://d15omoko64skxi.cloudfront.net/wp-content/uploads/2019/02/ccheart_red.svg_.zip
+  75. https://mirrors.creativecommons.org/presskit/cc.srr.primary.svg
+  78. https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg
+  81. https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-sa.svg
+  84. https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nd.svg
+  87. https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc.svg
+  90. https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc.eu.svg
+  93. https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-sa.svg
+  96. https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-sa.eu.svg
+  99. https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-nd.svg
+ 102. https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-nd.eu.svg
+ 105. https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg
+ 107. https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/publicdomain.svg
+ 109. https://mirrors.creativecommons.org/presskit/buttons/80x15/svg/by.svg
+ 112. https://mirrors.creativecommons.org/presskit/buttons/80x15/svg/by-sa.svg
+ 115. https://mirrors.creativecommons.org/presskit/buttons/80x15/svg/by-nd.svg
+ 118. https://mirrors.creativecommons.org/presskit/buttons/80x15/svg/by-nc.svg
+ 121. https://mirrors.creativecommons.org/presskit/buttons/80x15/svg/by-nc-sa.svg
+ 124. https://mirrors.creativecommons.org/presskit/buttons/80x15/svg/by-nc-nd.svg
+ 127. https://mirrors.creativecommons.org/presskit/buttons/80x15/svg/cc-zero.svg
+ 129. https://mirrors.creativecommons.org/presskit/buttons/80x15/svg/publicdomain.svg
+ 131. https://mirrors.creativecommons.org/presskit/icons/cc.svg
+ 134. https://mirrors.creativecommons.org/presskit/icons/by.svg
+ 137. https://mirrors.creativecommons.org/presskit/icons/nc.svg
+ 140. https://mirrors.creativecommons.org/presskit/icons/nc-eu.svg
+ 143. https://mirrors.creativecommons.org/presskit/icons/nc-jp.svg
+ 146. https://mirrors.creativecommons.org/presskit/icons/sa.svg
+ 149. https://mirrors.creativecommons.org/presskit/icons/nd.svg
+ 152. https://mirrors.creativecommons.org/presskit/icons/pd.svg
+ 155. https://mirrors.creativecommons.org/presskit/icons/zero.svg
+ 158. https://mirrors.creativecommons.org/presskit/icons/share.svg
+ 159. https://mirrors.creativecommons.org/presskit/icons/share.svg
+ 161. https://mirrors.creativecommons.org/presskit/icons/remix.svg
+ 164. https://mirrors.creativecommons.org/presskit/icons/cc-icons-svg.zip
+ 167. https://d15omoko64skxi.cloudfront.net/wp-content/uploads/2019/10/cc-sticker-2007.svg_.zip
+ 184. https://creativecommons.org/images/7/7d/Cc-fullpage-promo-svg.zip
