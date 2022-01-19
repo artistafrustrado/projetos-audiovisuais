@@ -1,13 +1,13 @@
 all: pdf
 
-cc:
+pdf:
 	xelatex --shell-escape projeto.tex
 	bibtex
 	xelatex --shell-escape projeto.tex
 	xelatex --shell-escape projeto.tex
 
-pdf:
-	xelatex --shell-escape projeto.tex
+cc:
+	xelatex --shell-escape cc.tex
 clean:
 	rm -fr *.idx
 	rm -fr *.lof
