@@ -14,6 +14,8 @@ clean:
 	rm -fr *.log
 	rm -fr *.lot
 	rm -fr *.toc
+	rm -fr *.aux
+	rm -fr *.out
 	
 purge: clean
 	rm -fr *.pdf

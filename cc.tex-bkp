@@ -1,0 +1,85 @@
+\documentclass[12pt,a4paper,final]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage{fourier}
+%\usepackage{fontspec}
+\usepackage[]{fontenc}
+%\defaultfontfeatures{Scale=MatchLowercase}
+%\setmainfont[SmallCapsFont={* Caps}]{Liberation Serif}
+%\setsansfont{Liberation Sans}
+%\setmonofont[SmallCapsFont={Courier New}]{Courier New}
+%\fontsize{10}{10}
+
+% \hyperref[mainlemma]{lemma \ref*{mainlemma} }.
+\usepackage{hyperref}
+\usepackage{wrapfig}
+
+\usepackage[T1]{fontenc}
+\usepackage{amsfonts}
+\setmainfont{Liberation Sans}
+\usepackage{svg}
+\usepackage{graphics}
+\usepackage{tikz}
+
+
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{Fernando Michelotti}
+\title{Creative Commons}
+\begin{document}
+
+%\includesvg[width=\paperwidth]{cc/buttons/by-nc-nd} 
+
+\begin{figure}
+\includesvg[width=\textwidth]{cc/buttons/by-nc-nd} 
+
+ \caption{2022 Fernando Michelotti - fernando.michelotti@ gmail.com.}
+\end{figure}
+
+
+Atribuição - NãoComercial - CompartilhaIgual 4.0 Brasil
+
+(CC BY-NC-SA 4.0 BR)
+
+Você tem o direito de:
+
+%\begin{wrapfigure}{l}{0.25\textwidth}
+%\includegraphics[width=0.9\linewidth]{overleaf-logo} 
+%\caption{Caption1}
+%\label{fig:wrapfig}
+%\end{wrapfigure}
+
+\includesvg{cc/icons/share}
+\textbf{Compartilhar} - copiar e redistribuir o material em qualquer suporte ou formato
+
+\textbf{Adaptar} - remixar, transformar, e criar a partir do material
+
+O licenciante não pode revogar estes direitos desde que você respeite os termos da licença.
+De acordo com os termos seguintes:
+
+\includesvg{cc/icons/by}
+\textbf{Atribuição} - Você deve dar o crédito apropriado, prover um link para a licença
+e indicar se mudanças foram feitas. Você deve fazê-lo em qualquer circunstância
+razoável, mas de nenhuma maneira que sugira que o licenciante apoia você ou
+o seu uso.
+
+\includesvg{cc/icons/nc}
+\textbf{Não Comercial} - Você não pode usar o material para fins comerciais.
+Compartilha Igual - Se você remixar, transformar, ou criar a partir do material,
+tem de distribuir as suas contribuições sob a mesma licença que o original.
+Sem restrições adicionais - Você não pode aplicar termos jurídicos ou medidas de caráter
+tecnológico que restrinjam legalmente outros de fazerem algo que a licença permita.
+
+
+\url{http://creativecommons.org/licenses/by-sa/4.0/legalcode}
+
+
+\clearpage
+\newpage 
+
+\end{document}

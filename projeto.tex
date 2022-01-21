@@ -1,32 +1,3 @@
-%% abtex2-modelo-projeto-pesquisa.tex, v<VERSION> laurocesar
-%% Copyright 2012-<COPYRIGHT_YEAR> by abnTeX2 group at http://www.abntex.net.br/ 
-%%
-%% This work may be distributed and/or modified under the
-%% conditions of the LaTeX Project Public License, either version 1.3
-%% of this license or (at your option) any later version.
-%% The latest version of this license is in
-%%   http://www.latex-project.org/lppl.txt
-%% and version 1.3 or later is part of all distributions of LaTeX
-%% version 2005/12/01 or later.
-%%
-%% This work has the LPPL maintenance status `maintained'.
-%% 
-%% The Current Maintainer of this work is the abnTeX2 team, led
-%% by Lauro César Araujo. Further information are available on 
-%% http://www.abntex.net.br/
-%%
-%% This work consists of the files abntex2-modelo-projeto-pesquisa.tex
-%% and abntex2-modelo-references.bib
-%%
-
-% ------------------------------------------------------------------------
-% ------------------------------------------------------------------------
-% abnTeX2: Modelo de Projeto de pesquisa em conformidade com 
-% ABNT NBR 15287:2011 Informação e documentação - Projeto de pesquisa -
-% Apresentação 
-% ------------------------------------------------------------------------ 
-% ------------------------------------------------------------------------
-
 \documentclass[
 	% -- opções da classe memoir --
 	12pt,				% tamanho da fonte
@@ -49,6 +20,7 @@
 % ---
 % PACOTES
 % ---
+\usepackage[T1]{fontenc}
 
 % ---
 % Pacotes fundamentais 
@@ -60,6 +32,9 @@
 \usepackage{color}				% Controle das cores
 \usepackage{graphicx}			% Inclusão de gráficos
 \usepackage{microtype} 			% para melhorias de justificação
+\usepackage{svg}
+\usepackage{tikz}
+\usepackage{xcolor}
 % ---
 
 % ---
@@ -74,6 +49,10 @@
 \usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
 \usepackage[alf]{abntex2cite}	% Citações padrão ABNT
 
+\usepackage{fontspec}
+\usepackage[T1]{fontenc}
+\usepackage{amsfonts}
+%\setmainfont{Liberation Sans}
 % --- 
 % CONFIGURAÇÕES DE PACOTES
 % --- 
@@ -108,7 +87,6 @@
 % o nome da instituição e a área de concentração 
 \preambulo{Modelo canônico de Projeto de Projeto Audiovisual \LaTeX.}
 % ---
-
 % ---
 % Configurações de aparência do PDF final
 
@@ -149,14 +127,11 @@
 % ---
 \makeindex
 % ---
-
 % ----
 % Início do documento
 % ----
 \begin{document}
 
-% Seleciona o idioma do documento (conforme pacotes do babel)
-%\selectlanguage{english}
 \selectlanguage{brazil}
 
 % Retira espaço extra obsoleto entre as frases.
@@ -167,24 +142,30 @@
 % ----------------------------------------------------------
 % \pretextual
 
+\definecolor{PinhaCultural}{HTML}{803300ff}
+
+\begin{tikzpicture}[remember picture, overlay, inner sep=0pt]
+\node[anchor=north west] at (current page.north west) {
+	\includesvg[width=\paperwidth]{svg/cover}};
+\end{tikzpicture}
+
+\pagecolor{PinhaCultural}
+
+\clearpage
+\pagecolor{white}
+
 % ---
 % Capa
 % ---
 \imprimircapa
 % ---
+\include{cc}
 
 % ---
 % Folha de rosto
 % ---
 \imprimirfolhaderosto
 % ---
-
-% ---
-% NOTA DA ABNT NBR 15287:2011, p. 4:
-%  ``Se exigido pela entidade, apresentar os dados curriculares do autor em
-%     folha ou página distinta após a folha de rosto.''
-% ---
-
 % ---
 % inserir lista de ilustrações
 % ---
@@ -229,7 +210,6 @@
 \cleardoublepage
 % ---
 
-
 % ----------------------------------------------------------
 % ELEMENTOS TEXTUAIS
 % ----------------------------------------------------------
@@ -241,23 +221,14 @@
 % ----------------------------------------------------------
 % Capitulo de textual  
 % ----------------------------------------------------------
-\chapter{Elementos textuais}
-
-\index{elementos textuais}A norma ABNT NBR 15287:2011, p. 5, apresenta a
-seguinte orientação quanto aos elementos textuais:
 
 \include{introducao}
-
-observadas pelo \abnTeX, é apresentada em \citeonline{abntex2classe}.
 
 % ----------------------------------------------------------
 % Capitulo com exemplos de comandos inseridos de arquivo externo 
 % ----------------------------------------------------------
 
-%\include{abntex2-modelo-include-comandos}
-%
-\part{Elementos Textuais}
-
+\include{elementos_criativos}
 % ---
 % Finaliza a parte no bookmark do PDF
 % para que se inicie o bookmark na raiz
@@ -268,11 +239,7 @@ observadas pelo \abnTeX, é apresentada em \citeonline{abntex2classe}.
 % ---
 % Conclusão
 % ---
-\chapter*[Considerações finais]{Considerações finais}
-\addcontentsline{toc}{chapter}{Considerações finais}
-
-\lipsum[31-33]
-
+\include{conclusao}
 % ----------------------------------------------------------
 % ELEMENTOS PÓS-TEXTUAIS
 % ----------------------------------------------------------
@@ -303,21 +270,10 @@ observadas pelo \abnTeX, é apresentada em \citeonline{abntex2classe}.
 % Imprime uma página indicando o início dos apêndices
 \partapendices
 
-% ----------------------------------------------------------
-\chapter{Quisque libero justo}
-% ----------------------------------------------------------
-
-\lipsum[50]
-
-% ----------------------------------------------------------
-\chapter{Nullam elementum urna vel imperdiet sodales elit ipsum pharetra ligula
-ac pretium ante justo a nulla curabitur tristique arcu eu metus}
-% ----------------------------------------------------------
-\lipsum[55-57]
+%\include{apendice}
 
 \end{apendicesenv}
 % ---
-
 
 % ----------------------------------------------------------
 % Anexos
@@ -331,24 +287,7 @@ ac pretium ante justo a nulla curabitur tristique arcu eu metus}
 % Imprime uma página indicando o início dos anexos
 \partanexos
 
-% ---
-\chapter{Morbi ultrices rutrum lorem.}
-% ---
-\lipsum[30]
-
-% ---
-\chapter{Cras non urna sed feugiat cum sociis natoque penatibus et magnis dis
-parturient montes nascetur ridiculus mus}
-% ---
-
-\lipsum[31]
-
-% ---
-\chapter{Fusce facilisis lacinia dui}
-% ---
-
-\lipsum[32]
-
+%\include{anexo}
 \end{anexosenv}
 
 %---------------------------------------------------------------------
