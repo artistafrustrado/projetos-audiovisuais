@@ -56,7 +56,9 @@
 % --- 
 % CONFIGURAÇÕES DE PACOTES
 % --- 
-
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+\usepackage[utf8]{inputenc} % Required for including letters with accents
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
 % ---
 % Configurações do pacote backref
 % Usado sem a opção hyperpageref de backref
@@ -224,10 +226,6 @@
 
 \include{introducao}
 
-% ----------------------------------------------------------
-% Capitulo com exemplos de comandos inseridos de arquivo externo 
-% ----------------------------------------------------------
-
 \include{elementos_criativos}
 % ---
 % Finaliza a parte no bookmark do PDF
@@ -253,11 +251,7 @@
 % ----------------------------------------------------------
 % Glossário
 % ----------------------------------------------------------
-%
-% Consulte o manual da classe abntex2 para orientações sobre o glossário.
-%
 %\glossary
-
 % ----------------------------------------------------------
 % Apêndices
 % ----------------------------------------------------------
@@ -273,20 +267,15 @@
 %\include{apendice}
 
 \end{apendicesenv}
-% ---
-
 % ----------------------------------------------------------
 % Anexos
 % ----------------------------------------------------------
-
 % ---
 % Inicia os anexos
 % ---
 \begin{anexosenv}
-
 % Imprime uma página indicando o início dos anexos
 \partanexos
-
 %\include{anexo}
 \end{anexosenv}
 
@@ -297,6 +286,5 @@
 \phantompart
 
 \printindex
-
 
 \end{document}
