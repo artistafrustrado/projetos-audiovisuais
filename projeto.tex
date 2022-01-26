@@ -21,7 +21,7 @@
 % PACOTES
 % ---
 \usepackage[T1]{fontenc}
-
+\usepackage{pinhac}
 % ---
 % Pacotes fundamentais 
 % ---
@@ -139,6 +139,9 @@
 % Retira espaço extra obsoleto entre as frases.
 \frenchspacing 
 
+\setmainfont{Liberation Sans}
+
+\chapterimage{Pictures/chapter_head_1.pdf} % Chapter heading image
 % ----------------------------------------------------------
 % ELEMENTOS PRÉ-TEXTUAIS
 % ----------------------------------------------------------
@@ -227,6 +230,7 @@
 \include{introducao}
 
 \include{elementos_criativos}
+\include{elementos-criativos/elementos-criativos}
 % ---
 % Finaliza a parte no bookmark do PDF
 % para que se inicie o bookmark na raiz
@@ -288,3 +292,6 @@
 \printindex
 
 \end{document}
+
+
+
