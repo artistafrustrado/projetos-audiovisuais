@@ -16,6 +16,14 @@ clean:
 	rm -fr *.toc
 	rm -fr *.aux
 	rm -fr *.out
-	
+	rm -fr elementos-criativos/*.idx
+	rm -fr elementos-criativos/*.lof
+	rm -fr elementos-criativos/*.log
+	rm -fr elementos-criativos/*.lot
+	rm -fr elementos-criativos/*.toc
+	rm -fr elementos-criativos/*.aux
+	rm -fr elementos-criativos/*.out
+
+
 purge: clean
 	rm -fr *.pdf
