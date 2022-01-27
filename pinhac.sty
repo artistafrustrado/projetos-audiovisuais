@@ -1,12 +1,18 @@
 
+\usepackage[final]{pdfpages}
+
+
 \usepackage{xcolor} % Required for specifying colors by name
 \definecolor{ocre}{RGB}{243,102,25} % Define the orange color used for highlighting throughout the book
 \usepackage{graphics}
 \usepackage[T1]{fontenc}
 \usepackage{amsfonts}
-\usepackage{wrapfig}
+%\setmainfont{Liberation Sans}
+
+%\usepackage{wrapimage} 
 
 \usepackage{fancyhdr} % Required for header and footer configuration
+
 \pagestyle{fancy} % Enable the custom headers and footers
 
 \renewcommand{\chaptermark}[1]{\markboth{\sffamily\normalsize\bfseries\chaptername\ \thechapter.\ #1}{}} % Styling for the current chapter in the header
@@ -51,152 +57,6 @@ innerbottommargin=5pt]{inormation}
 
 \newenvironment{information}{\begin{tBox}\begin{informationT}}{\end{informationT}\end{tBox}}
 
-%----------------------------------------------------------------------------------------
-%	PART HEADINGS
-%----------------------------------------------------------------------------------------
-
-% Numbered part in the table of contents
-\newcommand{\@mypartnumtocformat}[2]{%
-	\setlength\fboxsep{0pt}%
-	\noindent\colorbox{ocre!20}{\strut\parbox[c][.7cm]{\ecart}{\color{ocre!70}\Large\sffamily\bfseries\centering#1}}\hskip\esp\colorbox{ocre!40}{\strut\parbox[c][.7cm]{\linewidth-\ecart-\esp}{\Large\sffamily\centering#2}}%
-}
-
-% Unnumbered part in the table of contents
-\newcommand{\@myparttocformat}[1]{%
-	\setlength\fboxsep{0pt}%
-	\noindent\colorbox{ocre!40}{\strut\parbox[c][.7cm]{\linewidth}{\Large\sffamily\centering#1}}%
-}
-
-\newlength\esp
-\setlength\esp{4pt}
-\newlength\ecart
-\setlength\ecart{1.2cm-\esp}
-\newcommand{\thepartimage}{}%
-\newcommand{\partimage}[1]{\renewcommand{\thepartimage}{#1}}%
-\def\@part[#1]#2{%
-\ifnum \c@secnumdepth >-2\relax%
-\refstepcounter{part}%
-\addcontentsline{toc}{part}{\texorpdfstring{\protect\@mypartnumtocformat{\thepart}{#1}}{\partname~\thepart\ ---\ #1}}
-\else%
-\addcontentsline{toc}{part}{\texorpdfstring{\protect\@myparttocformat{#1}}{#1}}%
-\fi%
-\startcontents%
-\markboth{}{}%
-{\thispagestyle{empty}%
-\begin{tikzpicture}[remember picture,overlay]%
-\node at (current page.north west){\begin{tikzpicture}[remember picture,overlay]%	
-\fill[ocre!20](0cm,0cm) rectangle (\paperwidth,-\paperheight);
-\node[anchor=north] at (4cm,-3.25cm){\color{ocre!40}\fontsize{220}{100}\sffamily\bfseries\thepart}; 
-\node[anchor=south east] at (\paperwidth-1cm,-\paperheight+1cm){\parbox[t][][t]{8.5cm}{
-\printcontents{l}{0}{\setcounter{tocdepth}{1}}% The depth to which the Part mini table of contents displays headings; 0 for chapters only, 1 for chapters and sections and 2 for chapters, sections and subsections
-}};
-\node[anchor=north east] at (\paperwidth-1.5cm,-3.25cm){\parbox[t][][t]{15cm}{\strut\raggedleft\color{white}\fontsize{30}{30}\sffamily\bfseries#2}};
-\end{tikzpicture}};
-\end{tikzpicture}}%
-\@endpart}
-\def\@spart#1{%
-\startcontents%
-\phantomsection
-{\thispagestyle{empty}%
-\begin{tikzpicture}[remember picture,overlay]%
-\node at (current page.north west){\begin{tikzpicture}[remember picture,overlay]%	
-\fill[ocre!20](0cm,0cm) rectangle (\paperwidth,-\paperheight);
-\node[anchor=north east] at (\paperwidth-1.5cm,-3.25cm){\parbox[t][][t]{15cm}{\strut\raggedleft\color{white}\fontsize{30}{30}\sffamily\bfseries#1}};
-\end{tikzpicture}};
-\end{tikzpicture}}
-\addcontentsline{toc}{part}{\texorpdfstring{%
-\setlength\fboxsep{0pt}%
-\noindent\protect\colorbox{ocre!40}{\strut\protect\parbox[c][.7cm]{\linewidth}{\Large\sffamily\protect\centering #1\quad\mbox{}}}}{#1}}%
-\@endpart}
-\def\@endpart{\vfil\newpage
-\if@twoside
-\if@openright
-\null
-\thispagestyle{empty}%
-\newpage
-\fi
-\fi
-\if@tempswa
-\twocolumn
-\fi}
-
-
-%----------------------------------------------------------------------------------------
-%	THEOREM STYLES
-%----------------------------------------------------------------------------------------
-
-\usepackage{amsmath,amsfonts,amssymb,amsthm} % For math equations, theorems, symbols, etc
-
-\newcommand{\intoo}[2]{\mathopen{]}#1\,;#2\mathclose{[}}
-\newcommand{\ud}{\mathop{\mathrm{{}d}}\mathopen{}}
-\newcommand{\intff}[2]{\mathopen{[}#1\,;#2\mathclose{]}}
-\renewcommand{\qedsymbol}{$\blacksquare$}
-\newtheorem{notation}{Notation}[chapter]
-
-% Boxed/framed environments
-\newtheoremstyle{ocrenumbox}% Theorem style name
-{0pt}% Space above
-{0pt}% Space below
-{\normalfont}% Body font
-{}% Indent amount
-{\small\bf\sffamily\color{ocre}}% Theorem head font
-{\;}% Punctuation after theorem head
-{0.25em}% Space after theorem head
-{\small\sffamily\color{ocre}\thmname{#1}\nobreakspace\thmnumber{\@ifnotempty{#1}{}\@upn{#2}}% Theorem text (e.g. Theorem 2.1)
-\thmnote{\nobreakspace\the\thm@notefont\sffamily\bfseries\color{black}---\nobreakspace#3.}} % Optional theorem note
-
-\newtheoremstyle{blacknumex}% Theorem style name
-{5pt}% Space above
-{5pt}% Space below
-{\normalfont}% Body font
-{} % Indent amount
-{\small\bf\sffamily}% Theorem head font
-{\;}% Punctuation after theorem head
-{0.25em}% Space after theorem head
-{\small\sffamily{\tiny\ensuremath{\blacksquare}}\nobreakspace\thmname{#1}\nobreakspace\thmnumber{\@ifnotempty{#1}{}\@upn{#2}}% Theorem text (e.g. Theorem 2.1)
-\thmnote{\nobreakspace\the\thm@notefont\sffamily\bfseries---\nobreakspace#3.}}% Optional theorem note
-
-\newtheoremstyle{blacknumbox} % Theorem style name
-{0pt}% Space above
-{0pt}% Space below
-{\normalfont}% Body font
-{}% Indent amount
-{\small\bf\sffamily}% Theorem head font
-{\;}% Punctuation after theorem head
-{0.25em}% Space after theorem head
-{\small\sffamily\thmname{#1}\nobreakspace\thmnumber{\@ifnotempty{#1}{}\@upn{#2}}% Theorem text (e.g. Theorem 2.1)
-\thmnote{\nobreakspace\the\thm@notefont\sffamily\bfseries---\nobreakspace#3.}}% Optional theorem note
-
-% Non-boxed/non-framed environments
-\newtheoremstyle{ocrenum}% Theorem style name
-{5pt}% Space above
-{5pt}% Space below
-{\normalfont}% Body font
-{}% Indent amount
-{\small\bf\sffamily\color{ocre}}% Theorem head font
-{\;}% Punctuation after theorem head
-{0.25em}% Space after theorem head
-{\small\sffamily\color{ocre}\thmname{#1}\nobreakspace\thmnumber{\@ifnotempty{#1}{}\@upn{#2}}% Theorem text (e.g. Theorem 2.1)
-\thmnote{\nobreakspace\the\thm@notefont\sffamily\bfseries\color{black}---\nobreakspace#3.}} % Optional theorem note
-\makeatother
-
-% Defines the theorem text style for each type of theorem to one of the three styles above
-\newcounter{dummy} 
-\numberwithin{dummy}{section}
-\theoremstyle{ocrenumbox}
-\newtheorem{theoremeT}[dummy]{Theorem}
-\newtheorem{problem}{Problem}[chapter]
-\newtheorem{exerciseT}{Exercise}[chapter]
-\theoremstyle{blacknumex}
-\newtheorem{exampleT}{Example}[chapter]
-\theoremstyle{blacknumbox}
-\newtheorem{vocabulary}{Vocabulary}[chapter]
-\newtheorem{definitionT}{Definition}[section]
-\newtheorem{corollaryT}[dummy]{Corollary}
-\theoremstyle{ocrenum}
-\newtheorem{proposition}[dummy]{Proposition}
-
-
 
 %----------------------------------------------------------------------------------------
 %	CHAPTER HEADINGS
@@ -217,7 +77,7 @@ innerbottommargin=5pt]{inormation}
 {\begin{tikzpicture}[remember picture,overlay]
 \node[anchor=north west,inner sep=0pt] at (0,0) {\ifusechapterimage\includegraphics[width=\paperwidth]{\thechapterimage}\fi};
 \draw[anchor=west] (\Gm@lmargin,-9cm) node [line width=2pt,rounded corners=15pt,draw=ocre,fill=white,fill opacity=0.5,inner sep=15pt]{\strut\makebox[22cm]{}};
-\draw[anchor=west] (\Gm@lmargin+.3cm,-9cm) node {\huge\sffamily\bfseries\color{black}\thechapter\autodot~#1\strut};
+\draw[anchor=west] (\Gm@lmargin+1.5cm,-9cm) node {\huge\sffamily\bfseries\color{black}\thechapter\autodot~#1\strut};
 \end{tikzpicture}};
 \end{tikzpicture}
 \else
@@ -226,7 +86,7 @@ innerbottommargin=5pt]{inormation}
 {\begin{tikzpicture}[remember picture,overlay]
 \node[anchor=north west,inner sep=0pt] at (0,0) {\ifusechapterimage\includegraphics[width=\paperwidth]{\thechapterimage}\fi};
 \draw[anchor=west] (\Gm@lmargin,-9cm) node [line width=2pt,rounded corners=15pt,draw=ocre,fill=white,fill opacity=0.5,inner sep=15pt]{\strut\makebox[22cm]{}};
-\draw[anchor=west] (\Gm@lmargin+.3cm,-9cm) node {\huge\sffamily\bfseries\color{black}#1\strut};
+\draw[anchor=west] (\Gm@lmargin+1.5cm,-9cm) node {\huge\sffamily\bfseries\color{black}#1\strut};
 \end{tikzpicture}};
 \end{tikzpicture}
 \fi\fi\par\vspace*{270\p@}}}
@@ -239,7 +99,7 @@ innerbottommargin=5pt]{inormation}
 {\begin{tikzpicture}[remember picture,overlay]
 \node[anchor=north west,inner sep=0pt] at (0,0) {\ifusechapterimage\includegraphics[width=\paperwidth]{\thechapterimage}\fi};
 \draw[anchor=west] (\Gm@lmargin,-9cm) node [line width=2pt,rounded corners=15pt,draw=ocre,fill=white,fill opacity=0.5,inner sep=15pt]{\strut\makebox[22cm]{}};
-\draw[anchor=west] (\Gm@lmargin+.3cm,-9cm) node {\huge\sffamily\bfseries\color{black}#1\strut};
+\draw[anchor=west] (\Gm@lmargin+1.5cm,-9cm) node {\huge\sffamily\bfseries\color{black}#1\strut};
 \end{tikzpicture}};
 \end{tikzpicture}
 \par\vspace*{270\p@}}
@@ -265,66 +125,6 @@ addtohook={%
 \fi
 }
 }
-
-
-%----------------------------------------------------------------------------------------
-%	MAIN TABLE OF CONTENTS
-%----------------------------------------------------------------------------------------
-
-\usepackage{titletoc} % Required for manipulating the table of contents
-
-\contentsmargin{0cm} % Removes the default margin
-
-% Part text styling (this is mostly taken care of in the PART HEADINGS section of this file)
-\titlecontents{part}
-	[0cm] % Left indentation
-	{\addvspace{20pt}\bfseries} % Spacing and font options for parts
-	{}
-	{}
-	{}
-
-% Chapter text styling
-\titlecontents{chapter}
-	[1.25cm] % Left indentation
-	{\addvspace{12pt}\large\sffamily\bfseries} % Spacing and font options for chapters
-	{\color{ocre!60}\contentslabel[\Large\thecontentslabel]{1.25cm}\color{ocre}} % Formatting of numbered sections of this type
-	{\color{ocre}} % Formatting of numberless sections of this type
-	{\color{ocre!60}\normalsize\;\titlerule*[.5pc]{.}\;\thecontentspage} % Formatting of the filler to the right of the heading and the page number
-
-% Section text styling
-\titlecontents{section}
-	[1.25cm] % Left indentation
-	{\addvspace{3pt}\sffamily\bfseries} % Spacing and font options for sections
-	{\contentslabel[\thecontentslabel]{1.25cm}} % Formatting of numbered sections of this type
-	{} % Formatting of numberless sections of this type
-	{\hfill\color{black}\thecontentspage} % Formatting of the filler to the right of the heading and the page number
-
-% Subsection text styling
-\titlecontents{subsection}
-	[1.25cm] % Left indentation
-	{\addvspace{1pt}\sffamily\small} % Spacing and font options for subsections
-	{\contentslabel[\thecontentslabel]{1.25cm}} % Formatting of numbered sections of this type
-	{} % Formatting of numberless sections of this type
-	{\ \titlerule*[.5pc]{.}\;\thecontentspage} % Formatting of the filler to the right of the heading and the page number
-
-% Figure text styling
-\titlecontents{figure}
-	[1.25cm] % Left indentation
-	{\addvspace{1pt}\sffamily\small} % Spacing and font options for figures
-	{\thecontentslabel\hspace*{1em}} % Formatting of numbered sections of this type
-	{} % Formatting of numberless sections of this type
-	{\ \titlerule*[.5pc]{.}\;\thecontentspage} % Formatting of the filler to the right of the heading and the page number
-
-% Table text styling
-\titlecontents{table}
-	[1.25cm] % Left indentation
-	{\addvspace{1pt}\sffamily\small} % Spacing and font options for tables
-	{\thecontentslabel\hspace*{1em}} % Formatting of numbered sections of this type
-	{} % Formatting of numberless sections of this type
-	{\ \titlerule*[.5pc]{.}\;\thecontentspage} % Formatting of the filler to the right of the heading and the page number
-
-
-
 
 
 \setmainfont{Liberation Sans}
